@@ -1,3 +1,16 @@
+# HOW TO USE TEMPLATE
+
+- Replace following vars & commands with ur values:
+    - `$PROJ` - project name
+    - `$HOME` = home dir like `/home/leybovich-nikita`
+    - `$PORT` = port where service will run like 5003
+    - `ssh -l $USER $IP` - ssh creds like `ssh -l leybovich-nikita 84.201.131.244`
+    - `git clone $REPO_URL_SSH` - ssh git repo url `git clone git@github.com:potykion/potyk-stats.git`
+- Rename following files & occurrences to ur names:
+    - `example.service` - systemctl service
+- Create `.env` from `.evn.example` vars
+- Create `.venv` & install reqs: `pip install -r requirements-dev.txt`
+
 # $PROJ
 
 > $PROJ_DESC
