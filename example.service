@@ -1,5 +1,5 @@
 [Unit]
-Description=Wine Wish
+Description=$PROJ_DESC
 After=network.target
 
 [Service]

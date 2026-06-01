@@ -1,17 +1,19 @@
 # HOW TO USE TEMPLATE
 
 - Replace following vars & commands with ur values:
-    - `$PROJ` - project name
+    - `$PROJECT` - project name
+    - `$PROJ_DESC` - project description
     - `$HOME` = home dir like `/home/leybovich-nikita`
     - `$PORT` = port where service will run like 5003
     - `ssh -l $USER $IP` - ssh creds like `ssh -l leybovich-nikita 84.201.131.244`
     - `git clone $REPO_URL_SSH` - ssh git repo url `git clone git@github.com:potykion/potyk-stats.git`
+    - `$REPO_URL` - http git repo url `https://github.com/potykion/potyk-mu-2.git`
 - Rename following files & occurrences to ur names:
-    - `example.service` - systemctl service
+    - `example.service` - systemctl service & 
 - Create `.env` from `.evn.example` vars
 - Create `.venv` & install reqs: `pip install -r requirements-dev.txt`
 
-# $PROJ
+# $PROJECT
 
 > $PROJ_DESC
 
@@ -33,7 +35,7 @@ ssh -l $USER $IP
 # e.g. git@github.com:potykion/wine-wish.git
 git clone $REPO_URL_SSH
 
-cd $PROJ
+cd $PROJECT
 python3 -m venv ".venv"
 source ./.venv/bin/activate
 pip install -r requirements.txt
@@ -50,7 +52,7 @@ sudo systemctl enable --now example.service
 
 ```shell
 ssh -l $USER $IP
-cd $PROJ
+cd $PROJECT
 git pull
 sudo systemctl restart example.service
 ```
